@@ -1,7 +1,7 @@
 
 public class isUnique {
 
-	public static boolean isUniqueChars(String str) {
+  public static boolean isUniqueChars(String str) {
     if(str.length()>128){
       return false;
     }
