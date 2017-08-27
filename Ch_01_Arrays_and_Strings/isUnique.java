@@ -1,4 +1,3 @@
-
 public class isUnique {
 
   public static boolean isUniqueChars(String str) {
