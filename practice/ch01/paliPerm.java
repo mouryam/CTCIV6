@@ -4,6 +4,7 @@ Given a string, write a function to check if it is a permutation of a plaindrome
 Input: Tact Coa
 Output: true
 */
+package practice.ch01;
 public class paliPerm{
 
   public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package practice.ch01;
 public class isUnique {
 
   public static boolean isUniqueChars(String str) {

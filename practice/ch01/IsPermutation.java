@@ -1,4 +1,5 @@
-public class isPermutation{
+package practice.ch01;
+public class IsPermutation{
 
   public static void main(String[] args) {
     String[][] pairs = {{"apple", "papel"}, {"carrot", "tarroc"}, {"hello", "llloh"}};

@@ -8,7 +8,7 @@ Ex:
   pale,   bale  = true
   pale,   bake  = false
 */
-
+package practice.ch01;
 public class oneAway{
 
   public static void main(String[] args){
