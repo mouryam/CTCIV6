@@ -127,6 +127,26 @@ public class CTCIMethods {
 		return s;
 	}
 
+	public static void printMatrix(String[][] matrix){
+		for (int row = 0; row < matrix.length; row++) {
+				for (int col = 0; col < matrix[row].length; col++) {
+						System.out.print(matrix[row][col]+ "  ");
+				}
+				System.out.println();
+		}
+		System.out.println();
+	}
+
+	public static void printMatrix(char[][] matrix){
+		for (int row = 0; row < matrix.length; row++) {
+				for (int col = 0; col < matrix[row].length; col++) {
+						System.out.print(matrix[row][col]+ "  ");
+				}
+				System.out.println();
+		}
+		System.out.println();
+	}
+
 	public static void printMatrix(int[][] matrix) {
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[i].length; j++) {
