@@ -30,13 +30,11 @@ public class SubstringAddition{
     int total=0;
     for(int i=0; i<list.length; i++){
       total += list[i];
-      System.out.println("total: "+total);
       range.put(total, i);
     }
     ArrayList<Integer> found = new ArrayList<Integer>();
 
     for (int key : range.keySet()) {
-      System.out.println("key: "+key);
       if(range.containsKey(key-sum)){
         found.add(range.get(key-sum)+1);
         found.add(range.get(key));

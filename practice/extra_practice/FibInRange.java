@@ -37,7 +37,6 @@ public class FibInRange {
       for(int j=2; j<dp.length;j++){
         dp[j] = dp[j-1]+dp[j-2];
         temp += String.valueOf(dp[j]);
-        System.out.println("EXTRA: "+temp);
         if(Long.valueOf(temp) > max){
           break;
         }
