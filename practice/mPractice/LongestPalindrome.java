@@ -11,8 +11,8 @@ public class LongestPalindrome{
 
 	public static void main(String[] args) {
 		String x;
-		if (args.length ==0){
-			System.out.println("Passed in NOTHING!: going to use the default: 'aaabaaa'");
+		if (args.length == 0 || args.length>1){
+			System.out.println("Passed in incorrectly!: going to use the default: 'aaabaaa'");
 			x = "aaabaaa";
 		}else{
 			x = args[0];
