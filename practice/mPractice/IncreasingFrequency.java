@@ -88,11 +88,6 @@ public class IncreasingFrequency{
 		}
 		return output;
 	}
-
-
 	// Or you could have just used a treeMap.............
-
-
-
 
 }

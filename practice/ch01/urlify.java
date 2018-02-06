@@ -8,15 +8,15 @@ Input:  "Mr John Smith    ", 13
 Output: "Mr%20John%20Smith"
 */
 package practice.ch01;
-public class urlify{
+public class URLify{
 
   public static void main(String[] args) {
     char[] input = "Mr John Smith    ".toCharArray();
-    urlIfy(input, 13);
+    doURLify(input, 13);
     System.out.println(input);
  }
 
- public static void urlIfy(char[] str, int trueLength){
+ public static void doURLify(char[] str, int trueLength){
    int spaceNum = 0;
    for (int i =0; i<trueLength; i++) {
      if(str[i] == ' ') spaceNum++;

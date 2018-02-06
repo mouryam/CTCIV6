@@ -1,5 +1,5 @@
 /**
-Get the longest palindrom from a string
+Get the longest palindrome from a string
 
 aaabaaa
 aaabbaaa
