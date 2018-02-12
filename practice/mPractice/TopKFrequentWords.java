@@ -25,8 +25,9 @@ public class TopKFrequentWords{
 		}
 		System.out.println(wordCountMap);
 
-		PriorityQueue<Map.Entry<String,Integer>> pq = new PriorityQueue<>(
-			(a,b) -> a.getValue()==b.getValue() ? a.getKey().compareTo(b.getKey()) : a.getValue() - b.getValue()
+		PriorityQueue<Map.Entry<String,Integer>> pq = 
+			new PriorityQueue<>(
+				(a,b) -> a.getValue()==b.getValue() ? a.getKey().compareTo(b.getKey()) : a.getValue() - b.getValue()
 			);
 
 		for(Map.Entry<String,Integer> entry : wordCountMap.entrySet()){
