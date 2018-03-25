@@ -16,7 +16,7 @@ public class CoinDP{
     System.out.println("Number of ways: "+makeChange(change, 0, denominations, new HashMap<String,Integer>()));
 
     HashMap<Long, List<Long>> minMap = getMinCoinNumber(change, denominations);
-    System.out.println("Minimum number of coins needed: "+ minMap);
+    System.out.println("Minimum number eof coins needd: "+ minMap);
   }
 
   public static int makeChange(long change, int index, long[] denominations, HashMap<String,Integer> memo){
