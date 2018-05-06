@@ -8,7 +8,7 @@ it should invalidate the least recently used item before inserting a new item.
 
 Both operations in O(1) time complexity?
 Example:
-MyCache cache = new MyCache( 2);
+MyCache cache = new MyCache(2);
 cache.put(1, 1);
 cache.put(2, 2);
 cache.get(1);       // returns 1
@@ -31,6 +31,8 @@ import java.util.*;
 public class LRUCache{
 
 	public static void main(String[] args) {
+		// pick your cache type:
+		// DoublyLinkedNodeMap cache = new DoublyLinkedNodeMap(2);
 		LRULinkedHashMap cache = new LRULinkedHashMap(2);
 
 		System.out.println("put (1,1)");
@@ -108,6 +110,89 @@ public class LRUCache{
   			return sb.toString();
  		} 
 
+	}
+
+	static class DoublyLinkedNodeMap{
+	    class Node {
+        	Node prev, next;
+        	int key, value;
+        	Node(int key, int value) {
+            	this.key = key;
+            	this.value = value;
+        	}
+    	}
+    	private Node head, tail;
+		int capacity;
+		HashMap<Integer, Node> record;
+
+		DoublyLinkedNodeMap(int capacity){
+			this.capacity = capacity;
+			record = new HashMap<>();
+		}
+
+		int get(int key){
+			if(record.containsKey(key)){
+				Node n = record.get(key);
+				remove(n);
+				setHead(n);
+				return n.value;
+			}
+			return -1;
+		}
+
+		void remove(Node n){
+			if(n.prev!=null){
+				n.prev.next = n.next;
+			}else{
+				head = n.next;
+			}
+
+			if(n.next!=null){
+				n.next.prev = n.prev;
+			}else{
+				tail = n.prev;
+			}
+		}
+
+		void setHead(Node n){
+			n.next = head;
+			n.prev = null;
+			if(head!=null){
+				head.prev = n;
+			}
+			head = n;
+			// if tail is not set then this is the first and should be both head and tail
+			if(tail == null){
+				tail = head;
+			}
+		}
+
+		void put(int key, int value){
+			if(record.containsKey(key)){
+				Node old = record.get(key);
+				old.value = value;
+				remove(old);
+				setHead(old);
+			}else{
+				Node created = new Node(key, value);
+				if(record.size() >= capacity){
+					record.remove(tail.key);
+					remove(tail);
+				}
+				setHead(created);
+				record.put(key, created);			
+			}
+		}
+
+		public String toString(){ 
+			StringBuilder sb = new StringBuilder();
+			Node n = head;
+			while(n!=null){
+				sb.append(n.value+" -> ");
+				n = n.next;
+			}
+  			return sb.toString();
+ 		} 
 	}
 
 }
