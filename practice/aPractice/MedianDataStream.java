@@ -30,8 +30,8 @@ import java.util.*;
 public class MedianDataStream{
 
 	public static void main(String[] args) {
-		MedianFinderBST medianFinder = new MedianFinderBST();
-		// MedianFinderHEAPS medianFinder = new MedianFinderHEAPS();
+		// MedianFinderBST medianFinder = new MedianFinderBST();
+		MedianFinderHEAPS medianFinder = new MedianFinderHEAPS();
 
 		medianFinder.addNum(2);
 			System.out.println(medianFinder.findMedian());
@@ -45,6 +45,33 @@ public class MedianDataStream{
 				System.out.println(medianFinder.findMedian());
 
 		medianFinder.print();
+	}
+
+	static class MedianFinderHEAPS{
+		private PriorityQueue<Integer> small = new PriorityQueue<Integer>(Comparator.reverseOrder());
+		private PriorityQueue<Integer> large = new PriorityQueue<Integer>();
+		public MedianFinderHEAPS(){ 
+		}
+
+		public void addNum(int num){
+			small.offer(num);
+			large.offer(small.poll());
+			if(large.size()> small.size()){
+				small.offer(large.poll());
+			}
+		}
+    	public double findMedian() {
+        	if(large.size() == small.size()){
+        		return ( (large.peek() + small.peek()) / 2.0);
+        	}
+        	return small.peek();
+    	}
+    	public void print(){
+    		System.out.println("PQ ARE NOT IN ORDER!");
+    		System.out.println(small);
+    		System.out.println(large);
+    	}
+
 	}
 
 	static class MedianFinderBST{
