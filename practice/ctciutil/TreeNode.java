@@ -8,7 +8,7 @@ public class TreeNode {
 	public TreeNode left;
 	public TreeNode right;
 	public TreeNode parent;
-	private int size = 0;
+	public int size = 0;
 
 	public TreeNode(int d) {
 		data = d;
