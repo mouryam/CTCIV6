@@ -131,9 +131,12 @@ public class NumIslandsTwo {
     }
 
     private  static int findIslandRoot(int[] roots, int id) {
-    	while(id != roots[id]) id = roots[id];
+    	while(id != roots[id]) {
+    		roots[id] = roots[roots[id]];
+    		id = roots[id];
+    	} 
     	return id;
-}
+	}
 }
 
 
