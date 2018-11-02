@@ -8,7 +8,7 @@ Example: for 5 the user is allowed to enter 2, 4, 6, 8 or for 4 the user is allo
 IF the security code to enter is 1478 and if the user enters 1178 he should be allowed.
  Write a function to take security code from the user and print out if he should be allowed or not
 */
-package practice.extra_practice;
+package practice.ePractice;
 import ctciutil.CTCIMethods;
 import java.util.*;
 

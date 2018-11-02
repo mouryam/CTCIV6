@@ -5,7 +5,7 @@ eg :say you have a list {1 7 6 3 5 8 9 } and user is entering a sum 16.
 Output should display (2-4) that is {7 6 3} cause 7+6+3=16.
 
 */
-package practice.extra_practice;
+package practice.ePractice;
 import java.util.*;
 
 public class SubstringAddition{

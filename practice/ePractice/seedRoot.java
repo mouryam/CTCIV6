@@ -20,7 +20,7 @@ Output : No seed exists
 Input  : n = 738
 Output : 123
 */
-package practice.extra_practice;
+package practice.ePractice;
 import java.util.*;
 
 public class seedRoot{

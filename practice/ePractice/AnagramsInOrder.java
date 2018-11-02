@@ -5,7 +5,7 @@ For example, if the given array is {“cat”, “dog”, “tac”, “god”, 
 then output may be “cat tac act dog god”.
 */
 
-package practice.extra_practice;
+package practice.ePractice;
 import java.util.*;
 import java.lang.*;
 import java.io.*;

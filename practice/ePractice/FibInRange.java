@@ -9,7 +9,7 @@ For example:
 448:  4+4=8
 */
 
-package practice.extra_practice;
+package practice.ePractice;
 import java.util.*;
 
 

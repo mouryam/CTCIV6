@@ -13,7 +13,7 @@ Input : n = 4
 Output : 715
 */
 
-package practice.extra_practice;
+package practice.ePractice;
 import java.util.*;
 public class NonDecreasing{
 

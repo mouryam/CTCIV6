@@ -21,7 +21,7 @@
  */
 
 
-package practice.extra_practice;
+package practice.ePractice;
 import java.util.*;
 
 public class Colourful {

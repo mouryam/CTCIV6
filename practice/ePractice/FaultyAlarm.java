@@ -5,7 +5,7 @@ For example, if the correct code is "13654", the keypad should accept "13", "165
 Write a program that accepts an input code and determines if it should be accepted or rejected.
 */
 
-package practice.extra_practice;
+package practice.ePractice;
 import java.util.*;
 
 public class FaultyAlarm{

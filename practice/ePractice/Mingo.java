@@ -10,7 +10,7 @@ and list of "called" numbers. Your function will report whether a "Mingo" occurs
  and after how many called numbers the first Mingo occurs. You may assume valid input.
 
 */
-package practice.extra_practice;
+package practice.ePractice;
 import java.util.*;
 
 public class Mingo{
